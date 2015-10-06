@@ -4,75 +4,136 @@
 <head>
     <meta http-equiv="Content-type" content="text/html" charset="windows-1251">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SpaceTravelAgency</title>
+    <title>Космическое Туристическое Агентство</title>
     <meta name="description" content="space travel around the solar system">
     <meta name="keywords" content="space, travel, agency, solar system, 2061">
     <meta name="A. Iarnykh" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <link href="css/bootstrap-slate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Космическое Туристическое Агентство</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" placeholder="Поиск" class="form-control">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand navlogo" href="#">
+                            <p class="bg-primary">Космическое Туристическое Агентство</p>
+                        </a>
                     </div>
-                    <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
-                </form>
-            </div>
-            <!--/.navbar-collapse -->
+                    <div class="navbar-collapse collapse" id="navbar-top">
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input type="text" placeholder="Поиск" class="form-control">
+                            </div>
+                            <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+                        </form>
+                    </div>
+                    <!--/.navbar-collapse -->
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-inverse navbar-center">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar-bottom">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#sta-news" class="page-scroll">Новости</a></li>
+                            <li><a href="#sta-tour" class="page-scroll">Заказать тур</a></li>
+                            <li><a href="#sta-feedback" class="page-scroll">Отзывы</a></li>
+                            <li><a href="#sta-about" class="page-scroll">О Компании</a></li>
+                        </ul>
+                        <!--
+                        <form class="navbar-form navbar-right">
+                            <button type="submit" class="btn btn-default">Новости</button>
+                            <button type="submit" class="btn btn-default">Заказать тур</button>
+                            <button type="submit" class="btn btn-default">Отзывы</button>
+                            <button type="submit" class="btn btn-default">О Компании</button>
+                        </form>
+-->
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
             <h1>Посети другие планеты!</h1>
             <p>Туризм по планетам солнечной системы - лучшее впечатление в жизни.</p>
+            <img class="img-rounded" src="img/82723.jpg" alt="" align="right" width="100%" height="80%">
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Узнать больше &raquo;</a></p>
             <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
         </div>
     </div>
 
-    <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-md-4">
-                <h2>О Компании</h2>
-                <p>Наша компания предоставляет лучшие туры в Галактике! Нас знают в соседних системах! Работаем без столкновений с метеоритами начиная с 2051 года!</p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Каталог туров</h2>
-                <p>Тур на Марс - красная планета для смелых и выносливых. </p><br>
-                <p>Тур на Венеру - утончённая прогулка для аристократов. </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Новости</h2>
-                <p>Вчера завершился успешный полёт к Титану - величественному спутнику Сатурна.</p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <div id="sta-about" class="sta-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>О Компании</h2>
+                    <p>Наша компания предоставляет лучшие туры в Галактике! Нас знают в соседних системах! Работаем без столкновений с метеоритами начиная с 2051 года!</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
             </div>
         </div>
-
-        <hr>
-
-        <footer>
-            <p>&copy; Company 2014</p>
-        </footer>
     </div>
-    <!-- /container -->
 
+    <div id="sta-tour">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Каталог туров</h2>
+                    <p>Тур на Марс - красная планета для смелых и выносливых. </p>
+                    <br>
+                    <p>Тур на Венеру - утончённая прогулка для аристократов. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sta-news">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h2>Новости</h2>
+                    <p>Вчера завершился успешный полёт к Титану - величественному спутнику Сатурна.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container">
+        <div class="row">
+            <footer>
+                <p>&copy; Company 2014</p>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>

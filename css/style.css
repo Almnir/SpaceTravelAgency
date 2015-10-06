@@ -1,4 +1,62 @@
+.navlogo {
+    font-family: "Time New Roman", serif;
+    font-size: 28px;
+}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+#jumboimage {
+    float: right;
+    /* Обтекание картинки по левому краю */
+    padding-left: 10px;
+    /* Отступ слева */
+    padding-bottom: 10px;
+    /* Отступ снизу */
+    width: 200;
+    height: 100;
+}
+
+
+/* About Section */
+
+#sta-about {
+    padding: 80px 0;
+}
+
+ul.about-list {
+    margin: 30px 0 0;
+}
+
+ul.about-list li {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul.about-list li span {
+    margin-right: 10px;
+}
+
+#sta-about .overlay {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
+    /* IE6-9 */
+    height: auto;
+    background-attachment: fixed;
+    padding: 80px 0;
 }
