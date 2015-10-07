@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <nav class="navbar navbar-inverse" role="navigation">
+            <nav id="sta-menu" class="navbar navbar-inverse" role="navigation">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
@@ -24,8 +24,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand navlogo" href="#">
-                            <p class="bg-primary">Космическое Туристическое Агентство</p>
+                        <a class="navbar-brand" href="#">
+                            Космическое Туристическое Агентство
                         </a>
                     </div>
                     <div class="navbar-collapse collapse" id="navbar-top">
@@ -61,14 +61,6 @@
                             <li><a href="#sta-feedback" class="page-scroll">Отзывы</a></li>
                             <li><a href="#sta-about" class="page-scroll">О Компании</a></li>
                         </ul>
-                        <!--
-                        <form class="navbar-form navbar-right">
-                            <button type="submit" class="btn btn-default">Новости</button>
-                            <button type="submit" class="btn btn-default">Заказать тур</button>
-                            <button type="submit" class="btn btn-default">Отзывы</button>
-                            <button type="submit" class="btn btn-default">О Компании</button>
-                        </form>
--->
                     </div>
                 </div>
             </nav>
@@ -77,7 +69,7 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h1>Посети другие планеты!</h1>
+            <h2>Посети другие планеты!</h2>
             <p>Туризм по планетам солнечной системы - лучшее впечатление в жизни.</p>
             <img class="img-rounded" src="img/82723.jpg" alt="" align="right" width="100%" height="80%">
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Узнать больше &raquo;</a></p>
@@ -85,13 +77,38 @@
         </div>
     </div>
 
-    <div id="sta-about" class="sta-about">
+    <div id="sta-about">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h2>О Компании</h2>
-                    <p>Наша компания предоставляет лучшие туры в Галактике! Нас знают в соседних системах! Работаем без столкновений с метеоритами начиная с 2051 года!</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <img src="img/394916.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-text">
+                            <div class="section-title">
+                                <h4>О Компании</h4>
+                                <h2>Несколько слов <strong>о нас</strong></h2>
+                                <hr>
+                                <div class="clearfix"></div>
+                            </div>
+                            <p class="intro">Наша компания обожает своих клиентов (отправлять на ракете, нажав кнопку "старт"). Нас знают в соседних системах! </p>
+                            <ul class="about-list">
+                                <li>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <strong>Наша миссия</strong> - <em>Мы предоставляем лучшие туры в Галактике!</em>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <strong>Наша продуктивность</strong> - <em>Работаем без выходных!</em>
+                                </li>
+                                <li>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <strong>Наши клиенты</strong> - <em>Доверяют нам</em>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,11 +118,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Каталог туров</h2>
-                    <p>Тур на Марс - красная планета для смелых и выносливых. </p>
-                    <br>
-                    <p>Тур на Венеру - утончённая прогулка для аристократов. </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                    <h2><strong>Заказать тур</strong></h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                    <div class="item">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="text">Планета:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="text" placeholder="Введите название планеты">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="text">Период:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="text" placeholder="Введите период">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Запомнить меня</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
