@@ -1,34 +1,37 @@
-$(function() {
+$(function () {
 
     $("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
+        submitError: function ($form, event, errors) {},
+        submitSuccess: function ($form, event) {
+            event.preventDefault();
             // get values from FORM
             var name = $("input#name").val();
-            var email = $("input#email").val();
             var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
+            var email = $("input#email").val();
+            var address = $("input#address").val();
+            var tourtype = $("select#tourtype").val();
+            var datetime = $("input#datetime").val();
+            var comments = $("input#comments").val();
+            var firstName = name;
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "mail/tour.php",
                 type: "POST",
                 data: {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message
+                    address: address,
+                    tourtype: tourtype,
+                    datetime: datetime,
+                    comments: comments
                 },
                 cache: false,
-                success: function() {
-                    // Success message
+                success: function () {
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -37,27 +40,24 @@ $(function() {
                     $('#success > .alert-success')
                         .append('</div>');
 
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#tourForm').trigger("reset");
                 },
-                error: function() {
-                    // Fail message
+                error: function () {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append("<strong>Извините " + firstName + ", но почтовый сервер временно недоступен. Пожалуйста, попробуйте отправить заявку позже!!");
                     $('#success > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#tourForm').trigger("reset");
                 },
             })
         },
-        filter: function() {
+        filter: function () {
             return $(this).is(":visible");
         },
     });
 
-    $("a[data-toggle=\"tab\"]").click(function(e) {
+    $("a[data-toggle=\"tab\"]").click(function (e) {
         e.preventDefault();
         $(this).tab("show");
     });
@@ -65,6 +65,6 @@ $(function() {
 
 
 /*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
+$('#name').focus(function () {
     $('#success').html('');
 });
