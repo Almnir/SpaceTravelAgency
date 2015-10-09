@@ -5,13 +5,11 @@ $(function () {
         submitError: function ($form, event, errors) {},
         submitSuccess: function ($form, event) {
             event.preventDefault();
-            // get values from FORM
             var name = $("input#name").val();
             var phone = $("input#phone").val();
             var email = $("input#email").val();
             var address = $("input#address").val();
             var tourtype = $("select#tourtype").val();
-            var datetime = $("input#datetime").val();
             var comments = $("input#comments").val();
             var firstName = name;
             // Check for white space in name for Success/Fail message
@@ -19,7 +17,7 @@ $(function () {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "mail/tour.php",
+                url: "tour.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -27,7 +25,6 @@ $(function () {
                     email: email,
                     address: address,
                     tourtype: tourtype,
-                    datetime: datetime,
                     comments: comments
                 },
                 cache: false,
@@ -36,7 +33,7 @@ $(function () {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>Ваше сообщение было отправлено. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
@@ -64,7 +61,6 @@ $(function () {
 });
 
 
-/*When clicking on Full hide fail/success boxes */
 $('#name').focus(function () {
     $('#success').html('');
 });
